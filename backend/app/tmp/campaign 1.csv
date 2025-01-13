@@ -1,0 +1,9 @@
+month,dayOfWeekName,sessionManualMedium,sessionCampaignName,sessionManualSource,sessionManualTerm,sessionManualAdContent,averageSessionDuration,activeUsers,bounceRate,Sessions,totalUsers,engagementRate,day
+11,Monday,social_post_affiliate,campaign1,social,1,instagram,310.67844149999996,1.0,0.5,2.0,1.0,0.5,25
+11,Monday,social_post_affiliate,campaign1,social,2,youtube,14.475218,1.0,0.0,1.0,1.0,1.0,25
+11,Monday,social_post_affiliate,campaign1,social,1,youtube,35.97124725,4.0,0.5,4.0,4.0,0.5,25
+11,Monday,social_post_affiliate,campaign1,social,2,instagram,5.7290434,5.0,0.8,5.0,5.0,0.2,25
+11,Tuesday,social_post_affiliate,campaign1,social,2,youtube,4.94088,1.0,1.0,1.0,1.0,0.0,26
+11,Tuesday,social_post_affiliate,campaign1,social,2,instagram,1.035751,1.0,1.0,1.0,1.0,0.0,26
+11,Tuesday,social_post_affiliate,campaign1,social,1,instagram,5.3218815,1.0,1.0,2.0,2.0,0.0,26
+12,Sunday,social_post_affiliate,campaign1,social,2,youtube,1497.625362,1.0,0.0,1.0,1.0,1.0,22

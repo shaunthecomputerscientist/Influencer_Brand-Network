@@ -1,0 +1,23 @@
+# Dockerfile.frontend
+FROM node:18-alpine
+
+# Set working directory for frontend in the container
+WORKDIR /app/frontend
+
+# Copy package.json and package-lock.json for dependencies
+COPY frontend/package*.json ./
+
+# Install dependencies
+RUN npm install
+
+# Copy the entire frontend source code into the container
+COPY frontend /app/frontend/
+
+# Expose Vite's development port
+EXPOSE 5173
+
+# Set environment variable for file watching in Docker (CHOKIDAR_USEPOLLING)
+ENV CHOKIDAR_USEPOLLING=true
+
+# Run the development server
+CMD ["npm", "run", "dev"]

@@ -1,0 +1,30 @@
+# Dockerfile.backend
+FROM python:3.11-slim
+
+# Set working directory for backend in the container
+WORKDIR /app/backend
+
+# Install system dependencies for Python and PostgreSQL (if required)
+RUN apt-get update && apt-get install -y \
+    build-essential \
+    libpq-dev \
+    && rm -rf /var/lib/apt/lists/*
+
+# Copy only the backend's 'app' folder into the container
+COPY backend/app /app/backend/app
+
+# Copy the .env file into the container (to configure environment variables)
+COPY .env /app/backend/.env
+
+# Copy the requirements.txt file from the root project folder
+COPY requirements.txt /app/backend/requirements.txt
+
+# Set up Python virtual environment and install dependencies
+RUN python -m venv venv
+RUN . venv/bin/activate && pip install --no-cache-dir -r /app/backend/requirements.txt
+
+# Expose Flask's port
+EXPOSE 5000
+
+# Command to run the backend server (adjust with your script if necessary)
+CMD [".", "venv/bin/activate", "&&", "python", "app/main.py"]

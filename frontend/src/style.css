@@ -1,0 +1,293 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #ffffff;
+  /* font-synthesis: none; */
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  overflow: -moz-scrollbars-none;
+  -ms-overflow-style: none;
+}
+
+html::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+a {
+  font-weight: 500;
+  color: #ff0055;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #f29853;
+}
+
+body {
+  background-color: #ffffff;
+
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button{
+  border: 1px solid white;
+  border-radius: 0.5rem !important;
+  /* background: linear-gradient(to bottom,rgb(255, 182, 122), rgb(255, 180, 119), rgb(255, 176, 150)); */
+  background-color: rgba(255, 220, 167, 0.975);
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+  font-size: xx-small;
+  color: white;
+  text-wrap: nowrap;
+
+}
+
+button:hover {
+  border: 2px solid transparent;
+  /* padding: 0.5rem 1rem; */
+  font-family: inherit;
+  /* background: linear-gradient(to bottom,rgba(255, 188, 87, 0.975), rgba(255, 188, 87, 0.975), rgb(255, 176, 150)); */
+  background-color: rgb(255, 172, 113);
+  transition: 0.1s;
+  box-shadow: 1px 1px 0.2rem rgb(148, 148, 148);
+
+
+}
+
+.btn-warning{
+  background-color: #ffd187;
+}
+.btn-danger{
+  background-color: #ff6262;
+}
+.btn-success{
+  background-color: rgb(9, 190, 9);
+}
+.btn-info{
+  background-color: rgb(157, 255, 255);
+}
+.btn-subtheme{
+  background-color: #f74a53;
+}
+.btn-warning:hover{
+  background-color: #ffdf50;
+
+}
+.btn-success:hover{
+  background-color: rgb(83, 178, 83);
+
+}
+.btn-subtheme:hover{
+  background-color: #ff3d46;
+}
+.btn-danger:hover{
+  background-color: #ff0000;
+
+}
+.btn-info:hover{
+  background-color: rgb(0, 183, 255);
+}
+
+button:disabled {
+  background-color: #ccc;   /* Light gray background */
+  cursor: not-allowed;      /* Change cursor to indicate it's not clickable */
+  opacity: 0.5;             /* Reduce opacity for a faded look */
+  border: 1px solid #aaa;   /* Optional: Add a border to disabled buttons */
+  pointer-events: none;     /* Disable pointer events */
+}
+button:disabled:hover {
+  background-color: #ccc;   /* Light gray background */
+  color: #666;              /* Dark gray text */
+  cursor: not-allowed;      /* Change cursor to indicate it's not clickable */
+  opacity: 0.5;             /* Reduce opacity for a faded look */
+  border: 1px solid #aaa;   /* Optional: Add a border to disabled buttons */
+  pointer-events: none;     /* Disable pointer events */
+}
+
+input{
+}
+
+input:hover{
+  transition: 0.45s;
+
+}
+select:hover{
+  /* background-color: rgba(255, 188, 87, 0.975) !important; */
+
+}
+
+.active {
+  font-weight: bold;
+  background-color: rgb(255, 103, 136);
+}
+.active:hover{
+  font-weight: bold;
+  background-color: rgb(255, 97, 102);
+}
+
+
+.active-tab {
+  background-color: #ff895e;
+  color: white;
+  font-weight: bold;
+}
+.active-tab:hover{
+  background-color: #ff7c4c;
+  color: white;
+  font-weight: bold;
+}
+
+.card {
+  padding: 2em;
+}
+
+#app {
+  
+}
+.v-select .vs__dropdown-option:hover {
+  background-color:rgb(255, 188, 87); /* Change to your desired hover color */
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #ffffff;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #f2005d;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+.navbar {
+  position: relative !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  z-index: 1050 !important;
+  background-color: rgb(255, 243, 224) !important;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1) !important;
+  /* border: #121212 solid; */
+  /* margin-bottom: 10px !important; */
+  /* border: black solid 20px; */
+}
+
+/* Collapse style */
+.navbar .collapse {
+  transition: max-height 2s ease-in;
+  display: flex;
+  /* border: #121212 solid; */
+
+}
+
+.navbar .collapse.show {
+  /* min-height: 100px; */
+  position: absolute !important;
+  width:100%;
+  top: 0;
+  left: 0;
+  margin-top: 3.5rem;
+  background-color: rgb(255, 243, 224) !important;
+  padding: 1rem;
+
+}
+.navbar .collapse ul{
+  /* border: #121212 solid; */
+  width: 100%;
+}
+
+.navbar .collapse:not(.show) {
+  max-height: 0;
+}
+
+
+.tooltipp {
+  position: relative; /* Positioning context for the tooltip */
+  display: inline-block; /* Keeps the tooltip next to the status indicator */
+
+}
+
+.tooltiptext {
+  visibility: hidden; /* Hidden by default */
+  width: 20rem;
+  background-color: rgba(255, 202, 122, 0.975);
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 100%; /* Position above the indicator */
+  /* left: 30%; */
+  margin-left: -10em; /* Center the tooltip */
+  opacity: 0; /* Start as invisible */
+  transition: opacity 0.3s; /* Smooth transition */
+}
+
+.tooltipp:hover .tooltiptext {
+  visibility: visible; /* Show the tooltip on hover */
+  opacity: 1; /* Make it visible */
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+.hide-scrollbar{
+background-color: 1px solid black;
+}
+
+::-webkit-scrollbar{
+  display: none;
+}
+
+.text-theme{
+  color: #ffcd7d;
+}
+.theme-background{
+  color: #ffcd7d;
+  background-color: #ffba852e;
+}
+.btn-theme{
+  color: #ffb074;
+  padding: 0.3rem 0.4rem;
+  border-radius: 0.2rem;
+  font-size: large;
+  background-color: #ffd187e1;
+  box-shadow: 1px 1px 0.2rem rgba(148, 148, 148, 0.445);
+
+}
+.btn-theme:hover{
+  background-color: #f29853;
+  color:#ffc15dc2;
+  box-shadow: none;
+  transition: 0.5s;
+}
+
+.btn-theme2{
+  color: #121212;
+  padding: 0.3rem 0.4rem;
+  border-radius: 0.2rem;
+  font-size: large;
+  background-color: #ffd187e1;
+  box-shadow: 1px 1px 0.2rem rgba(148, 148, 148, 0.445);
+
+}
+.btn-theme2:hover{
+  background-color: #f29853;
+  color:#ffc15dc2;
+  box-shadow: none;
+  transition: 0.5s;
+}

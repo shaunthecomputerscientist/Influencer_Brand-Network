@@ -1,0 +1,70 @@
+{
+    "utm_mapping": {
+      "youtube": {
+        "source": "social",
+        "medium": "video"
+      },
+      "instagram": {
+        "source": "social",
+        "medium": "social_post"
+      },
+      "facebook": {
+        "source": "social",
+        "medium": "social_post"
+      },
+      "twitter": {
+        "source": "social",
+        "medium": "social_post"
+      },
+      "LinkedIn": {
+        "source": "social",
+        "medium": "social_post"
+      },
+      "TikTok": {
+        "source": "social",
+        "medium": "video"
+      },
+      "gmail": {
+        "source": "email",
+        "medium": "email"
+      },
+      "Google": {
+        "source": "search",
+        "medium": "paid_search"
+      },
+      "Google Ads": {
+        "source": "google_ads",
+        "medium": "paid_search"
+      },
+      "Bing": {
+        "source": "search",
+        "medium": "paid_search"
+      },
+      "Pinterest": {
+        "source": "social",
+        "medium": "social_post"
+      },
+      "Snapchat": {
+        "source": "social",
+        "medium": "video"
+      },
+      "Email Marketing": {
+        "source": "email",
+        "medium": "email_campaign"
+      },
+      "SMS": {
+        "source": "sms",
+        "medium": "text_message"
+      },
+      "WhatsApp": {
+        "source": "social",
+        "medium": "messaging"
+      },
+      "Telegram": {
+        "source": "social",
+        "medium": "messaging"
+      }
+    }
+  }  
+
+

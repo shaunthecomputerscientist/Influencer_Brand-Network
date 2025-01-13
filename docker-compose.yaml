@@ -1,0 +1,45 @@
+services:
+  # Backend Service
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile.backend
+    container_name: backend
+    working_dir: /app/backend
+    ports:
+      - "5000:5000"  # Exposing Flask port
+    volumes:
+      - ./backend:/app/backend  # Bind mount to allow for code updates during development
+      - ./frontend/ssl-certificates:/app/backend/ssl-certificates  # Optional, if needed for SSL
+      - ./.env:/app/backend/.env  # Mount .env file for environment variables
+    environment:
+      - FLASK_APP=main.py  # Assuming your entry point is main.py, adjust if necessary
+    command: /bin/bash -c ". venv/bin/activate && python app/main.py"  # Command to run your Flask app
+
+  # Frontend Service
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile.frontend
+    container_name: frontend
+    working_dir: /app/frontend
+    ports:
+      - "5173:5173"  # Exposing Vite dev server port
+    volumes:
+      - ./frontend:/app/frontend  # Bind mount to allow code updates during development
+      - ./frontend/ssl-certificates:/app/frontend/ssl-certificates  # Optional, if needed for SSL
+    environment:
+      - VITE_APP_BACKEND_URL=https://localhost:5000  # API URL for backend
+    command: ["npm", "run", "dev"]  # Run the Vite dev server with HTTPS
+
+  # Optional: Redis service (if needed for cache or other purposes)
+  redis:
+    image: redis:latest
+    container_name: redis
+    ports:
+      - "6379:6379"  # Redis port mapping
+    volumes:
+      - redis-data:/data  # Persist data in case the container restarts
+
+volumes:
+  redis-data:
