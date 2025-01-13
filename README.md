@@ -1,6 +1,6 @@
-Influencer Marketing Platform Documentation
+# Influencer Brand Campaign Management Platform Documentation
 
-Introduction
+## Introduction
 
 The Influencer Marketing Platform is designed to bridge the gap between brands/businesses and influencers, enabling seamless collaboration for social media campaigns. The platform provides an end-to-end solution for influencer discovery, campaign management, and performance tracking. By leveraging cutting-edge APIs, scraping tools, and AI-powered insights, the application offers a robust ecosystem for managing influencer marketing campaigns effectively.
 
@@ -12,7 +12,7 @@ The Influencer Marketing Platform is designed to bridge the gap between brands/b
 
 #### Note: If you want to collaborate to convert this to a fully functioning business and you have more ideas, then contact here mrpolymathematica@gmail.com.
 
-Why This App Is Needed?
+## Why This App Is Needed?
 
 In today’s digital age, influencer marketing has emerged as a critical strategy for brands to connect with their target audience. However, brands face several challenges:
 
@@ -34,152 +34,151 @@ Granular performance metrics and analytics.
 
 Scalability and distributed architecture to handle large campaigns.
 
-Core Features
+## Core Features
 
 1. Authentication and Authorization
 
-Token-based authentication with short-lived access tokens and HTTP-only refresh tokens for enhanced security against XSS attacks.
+- Token-based authentication with short-lived access tokens and HTTP-only refresh tokens for enhanced security against XSS attacks.
 
-Automatic silent token rotation ensures uninterrupted user experience.
+- Automatic silent token rotation ensures uninterrupted user experience.
 
-CORS policies restrict access to specific origins.
+- CORS policies restrict access to specific origins.
 
-Passwords are hashed using the scrypt algorithm for secure storage.
+- Passwords are hashed using the scrypt algorithm for secure storage.
 
-Secure “Forgot Password” functionality for password reset.
+- Secure “Forgot Password” functionality for password reset.
 
-Role-based access control (RBAC) to assign permissions based on user roles (e.g., influencer, brand, admin).
+- Role-based access control (RBAC) to assign permissions based on user roles (e.g., influencer, brand, admin).
 
 2. Influencer Integration
 
-Phyllo API: Integrates with Phyllo to fetch influencer data such as followers, engagement rates, and post metadata from platforms like Instagram and YouTube.
+- Phyllo API: Integrates with Phyllo to fetch influencer data such as followers, engagement rates, and post metadata from platforms like Instagram and YouTube.
 
-YouTube API: Tracks influencer details and post performance manually.
+- YouTube API: Tracks influencer details and post performance manually.
 
-Instaloader: Scrapes Instagram influencer details via proxies, returning JSON data.
+- Instaloader: Scrapes Instagram influencer details via proxies, returning JSON data.
 
-Future support for Instagram API for enhanced performance.
+- Future support for Instagram API for enhanced performance.
 
 3. Influencer Discovery
 
-Brands can search for influencers using filters like niche, followers, engagement rate, etc.
+- Brands can search for influencers using filters like niche, followers, engagement rate, etc.
 
-AI-powered influencer discovery assigns a success score to predict campaign outcomes.
+- AI-powered influencer discovery assigns a success score to predict campaign outcomes.
 
 4. Campaign Management
 
-Brands can create, manage, and track campaigns.
+- Brands can create, manage, and track campaigns.
 
-Influencers can send requests to join campaigns, which brands can approve or reject.
+- Influencers can send requests to join campaigns, which brands can approve or reject.
 
-A cap is placed on the number of influencers per campaign.
+- A cap is placed on the number of influencers per campaign.
 
-Chat interface for private conversations and negotiations.
+- Chat interface for private conversations and negotiations.
 
-Task-based progress tracking with equal weightage for all tasks.
+- Task-based progress tracking with equal weightage for all tasks.
 
-Metrics for measuring campaign success:
+- Metrics for measuring campaign success:
 
-InfluencerSocials: Tracks influencers' posts on social media platforms and evaluates their impact.
+- InfluencerSocials: Tracks influencers' posts on social media platforms and evaluates their impact.
 
-BrandSocials: Assesses the growth in brand’s social media presence during the campaign.
+- BrandSocials: Assesses the growth in brand’s social media presence during the campaign.
 
-UTM Links: Provides granular tracking using Google Analytics API.
+- UTM Links: Provides granular tracking using Google Analytics API.
 
 5. Performance Tracking and Analytics
 
-Weighted progress tracking combining:
+- Weighted progress tracking combining:
 
-Task Progress: Measures completion rates of influencer tasks.
+- Task Progress: Measures completion rates of influencer tasks.
 
-Goal Progress: Combines InfluencerSocials, BrandSocials, and UTM Links metrics.
+- Goal Progress: Combines InfluencerSocials, BrandSocials, and UTM Links metrics.
 
-Individual influencer contributions are highlighted in analytics reports.
+- Individual influencer contributions are highlighted in analytics reports.
 
 6. Scalability and Optimization
 
-Redis for caching computationally expensive endpoints.
+- Redis for caching computationally expensive endpoints.
 
-Celery for asynchronous task management with beat schedules.
+- Celery for asynchronous task management with beat schedules.
 
-Horizontally scalable architecture with services like Phyllo API, Redis, and Celery running independently.
+- Horizontally scalable architecture with services like Phyllo API, Redis, and Celery running independently.
 
 7. Notifications
 
-Gmail SMTP server used for sending notifications, signup emails, and password reset emails.
+- Gmail SMTP server used for sending notifications, signup emails, and password reset emails.
 
 8. Admin Features
 
-Admins can flag or delete accounts and campaigns.
+- Admins can flag or delete accounts and campaigns.
 
-Notifications are sent for every administrative action.
+- Notifications are sent for every administrative action.
 
 9. UI Features
 
-Interactive and user-friendly design.
+- Interactive and user-friendly design.
 
-Clean interface that displays only relevant data per page to avoid overwhelming users.
+- Clean interface that displays only relevant data per page to avoid overwhelming users.
 
 Technical Implementation
 
 1. Security
 
-Token Security:
+- Token Security:
 
-HTTP-only refresh tokens for secure token storage.
+- HTTP-only refresh tokens for secure token storage.
 
-Silent token rotation for a seamless user experience.
+- Silent token rotation for a seamless user experience.
 
 Password Security:
 
-Passwords hashed using the scrypt algorithm.
+- Passwords hashed using the scrypt algorithm.
 
-Secure reset mechanisms for forgotten passwords.
+- Secure reset mechanisms for forgotten passwords.
 
 CORS Policy:
 
-Restricts API access to specific origins.
+- Restricts API access to specific origins.
 
 2. Campaign Progress Tracking
 
 Task Progress:
 
-Each campaign consists of tasks.
+- Each campaign consists of tasks.
 
-Completion percentage calculated based on completed tasks.
+- Completion percentage calculated based on completed tasks.
 
-Influencers must get task completion approved by the brand.
+- Influencers must get task completion approved by the brand.
 
 Goal Progress:
 
-InfluencerSocials: Calculates progress based on views, likes, or engagement metrics.
+- InfluencerSocials: Calculates progress based on views, likes, or engagement metrics.
 
-BrandSocials: Tracks brand’s growth in followers and engagement.
+- BrandSocials: Tracks brand’s growth in followers and engagement.
 
-UTM Links: Google Analytics API used to monitor influencer-driven traffic.
+- UTM Links: Google Analytics API used to monitor influencer-driven traffic.
 
 3. Backend Services
 
-Redis: Key-value caching for high-performance endpoints.
+- Redis: Key-value caching for high-performance endpoints.
 
-Celery: Manages asynchronous jobs with beat schedules for periodic tasks.
+- Celery: Manages asynchronous jobs with beat schedules for periodic tasks.
 
-Phyllo API: Retrieves influencer data from multiple platforms.
+- Phyllo API: Retrieves influencer data from multiple platforms.
 
-Instaloader: Scrapes Instagram data via proxies.
+- Instaloader: Scrapes Instagram data via proxies.
 
 4. Infrastructure
 
-Distributed architecture ensures horizontal scalability.
+- Distributed architecture ensures horizontal scalability.
 
-Layered MVC pattern separates concerns:
+- Layered MVC pattern separates concerns:
 
-Model: Database layer, single source of truth.
+- Model: Database layer, single source of truth.
 
-View: Client-side logic.
+- View: Client-side logic.
 
-Controller: Application logic.
-
-Conclusion
+- Controller: Application logic.
+## Conclusion
 
 This influencer marketing platform provides a robust, scalable, and secure environment for managing influencer campaigns. By combining APIs, AI-driven insights, and user-friendly design, it addresses the most pressing challenges in influencer marketing. With advanced analytics and performance tracking, brands can make data-driven decisions to maximize their ROI, while influencers benefit from clear and structured campaign management.
