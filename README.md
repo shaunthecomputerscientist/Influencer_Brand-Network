@@ -120,7 +120,7 @@ In today's fast-paced digital marketing world, brands face countless challenges:
 ### 💡 **Backend Services**  
 - **Redis**: Speeds up response times by caching data.  
 - **Celery**: Handles background tasks like data syncing and notifications.  
-- **Phyllo API & Instaloader**: Robust integration for influencer data.  
+- **Phyllo API & social media apis**: Robust integration for influencer data.  
 
 ---
 
